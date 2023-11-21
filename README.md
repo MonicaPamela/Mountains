@@ -1,1 +1,1 @@
-# Mountains
+This is a capstone project for users who are deciding on where to take their next trip in the mountains or one of our National Parks! Designed to be interactive and entertaining as well as informative! With fun features like a scrollable staircase and weather animations, all ages will enjoy learning and planning with Plan & Play Co.
