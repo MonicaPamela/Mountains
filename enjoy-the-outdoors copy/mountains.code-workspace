@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Mountains",
+			"path": "../Mountains"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mountains"
+	}
+}

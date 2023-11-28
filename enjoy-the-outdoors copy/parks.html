@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan & Play National Guides Parks</title>
+  </head>
+  <link href="./parks.css" rel="stylesheet" />
+  <script src="./scripts/nationalParkData.js"></script>
+  <script src="./scripts/parkTypeData.js"></script>
+  <script src="./scripts/locationData.js"></script>
+
+  <body>
+    <div class="title">
+    <h1 class="welcome">
+        Welcome to Plan & Play National Guides 
+        </h1>
+        <div class="p">
+          Where your National Park adventure begins with effortless planning. Our goal is
+           simple: to be your go-to resource for creating unforgettable 
+           experiences in our nation's stunning parks. We take care of 
+           the details, so you can focus on experiencing every moment of 
+           your journey. 
+        </div>
+      </div>
+    
+      <div class="container">
+        <div class="cloud"></div>
+      </div>
+
+     <script> function randomText() {
+        var text = "abcdefghijklmnopqrstuvwxyz";
+        var letter = text[Math.floor(Math.random() * text.length)];
+        return letter;
+      }
+      function rain() {
+        let cloud = document.querySelector(".cloud");
+        let e = document.createElement("div");
+        let left = Math.floor(Math.random() * 310);
+        let size = Math.floor(Math.random() * 1.5);
+        let duration = Math.random() * 1;
+        e.classList.add("text");
+        cloud.appendChild(e);
+        e.innerText = randomText();
+        e.style.left = left + "px";
+        e.style.fontSize = 0.5 + size + "em";
+        e.style.animationDuration = 1 + duration + "s";
+      
+        setTimeout(function () {
+          cloud.removeChild(e);
+        }, 2000);
+      }
+      
+      setInterval(function () {
+        rain();
+      }, 20);
+    </script>
+    <h1 class="center">
+        
+   
+    <div class="home">
+    <a class="button" href="index.html" style="--color: rgb(255, 255, 255);">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Home
+    </a>
+    </div>
+    <br>
+    <br>
+    <div>
+<div class="mountains">
+    <a class="button" href="mountain.html" style="--color: rgb(255, 255, 255);">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Mountains
+    </a>
+</div>
+
+<div>
+    <select id="locations">
+      <option value="null">State</option>
+    </select>
+    <br>
+    <button id="locationsearch">Next</button>
+    <br>
+    <div class="mountain" id="resultlist">
+      <p id="results"></p>
+    </div>
+    <br/>
+    <br/>
+    <select id="parktype">
+      <option value="null">Park type</option>
+    </select>
+    <br>
+    <button id="typesearch" >Explore</button>
+    <br>
+    <div id="resultlistType" class="preserve">
+      <p id="resultsType"></p>
+    </div>
+</div>
+
+   
+    <script src="./scripts/parkTypeData.js" rel="script"></script>
+    <script src="./scripts/nationalParkData.js" rel="script"></script>
+    <script src="./scripts/js.js" rel="script"></script>
+    <script src="./parks.js" rel="script"></script>
+  </body>
+</html>
