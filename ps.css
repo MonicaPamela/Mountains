@@ -1,0 +1,567 @@
+body {background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, 
+    rgba(99,9,121,1) 35%, rgba(0,212,255,1) 100%); margin-right: 30%;}
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        animation: skyChange 40s linear infinite;
+        background: deepskyblue;
+        margin-right: 4rem;
+    }
+    
+    
+    #sky {
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+    
+    }
+    
+    @keyframes skyChange {
+        
+        0% {
+            background: deepskyblue;
+        }
+        25% {
+            background: deepskyblue;
+        }
+        32% {
+            background: aliceblue;
+        }
+        41% {
+            background: deepskyblue;
+        }
+        70% {
+            background: deepskyblue;
+        }
+        100% {
+            background: #00d2ff; /* fallback for old browsers */
+            background: -webkit-linear-gradient(
+                to right,
+                #3a7bd5,
+                #00d2ff
+            ); 
+            background: linear-gradient(
+                to right,
+                #3a7bd5,
+                #00d2ff
+            ); 
+        }
+    }
+     .p{ background-color: #fff;}
+    
+    .theSun {
+        z-index: -1;
+        box-shadow: 0px 0px 15px 3px yellow;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 15vh;
+        left: 30vw;
+        animation: sunpulse 2s alternate infinite;
+        border-radius: 50%;
+        background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+    }
+    
+    @keyframes sunpulse {
+        from {
+            box-shadow: 0 0 100px #ff0, 0 0 100px #ff0;
+        }
+        to {
+            box-shadow: 0 0 25px #ff0, 0 0 75px #ff0;
+        }
+    }
+    
+    
+    
+    .cloudwrapperOne,
+    .cloudwrapperTwo,
+    .cloudwrapperThree {
+        animation: movecloudsoversky 43s linear infinite;
+        animation-delay: -1s;
+        z-index: -1;
+    }
+    
+    .cloudwrapperTwo {
+        animation-delay: -1s;
+    }
+    
+    .cloudwrapperThree {
+        animation-delay: -2s;
+    }
+    
+    .cloud {
+        width: 200px;
+        height: 60px;
+        background: white;
+        position: relative;
+        border-radius: 200px;
+        z-index: 1;
+    }
+    
+    .cloud:before,
+    .cloud:after {
+        content: "";
+        background: white;
+        position: absolute;
+        width: 100px;
+        height: 80px;
+        top: -15px;
+        left: 10px;
+        border-radius: 100px;
+        transform: rotate(30deg);
+    }
+    
+    .cloud:after {
+        width: 120px;
+        height: 120px;
+        top: -55px;
+        left: auto;
+        right: 15px;
+    }
+    
+    .c1 {
+        margin-top: -50px;
+        animation-delay: -2s;
+    }
+    
+    .c2 {
+        margin-top: 10px;
+        animation-delay: -18s;
+    }
+    
+    .c3 {
+        margin-top: 5px;
+        animation-delay: -7s;
+    }
+    
+    @keyframes movecloudsoversky {
+        0% {
+            transform: translate(-25%, 10vh);
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translate(125%, 10vh);
+            opacity: 0.4;
+        }
+    }
+    
+    
+    
+    .ray_box {
+        position: absolute;
+        margin: auto;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 70px;
+        animation: ray_anim 10s linear infinite;
+        z-index: -1;
+    }
+    
+    .ray {
+        background: -webkit-linear-gradient(
+            top,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        background: linear-gradient(
+            top,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        margin-left: 10px;
+        border-radius: 80% 80% 0 0;
+        position: absolute;
+        opacity: 0.1;
+    }
+    
+    .ray1 {
+        height: 170px;
+        width: 30px;
+        transform: rotate(180deg);
+        top: -175px;
+        left: 15px;
+    }
+    
+    .ray2 {
+        height: 100px;
+        width: 8px;
+        transform: rotate(220deg);
+        top: -90px;
+        left: 75px;
+    }
+    
+    .ray3 {
+        height: 170px;
+        width: 50px;
+        transform: rotate(250deg);
+        top: -80px;
+        left: 100px;
+    }
+    
+    .ray4 {
+        height: 120px;
+        width: 14px;
+        transform: rotate(305deg);
+        top: 30px;
+        left: 100px;
+    }
+    
+    .ray5 {
+        height: 140px;
+        width: 30px;
+        transform: rotate(-15deg);
+        top: 60px;
+        left: 40px;
+    }
+    
+    .ray6 {
+        height: 90px;
+        width: 50px;
+        transform: rotate(30deg);
+        top: 60px;
+        left: -40px;
+    }
+    
+    .ray7 {
+        height: 180px;
+        width: 10px;
+        transform: rotate(70deg);
+        top: -35px;
+        left: -40px;
+    }
+    
+    .ray8 {
+        height: 120px;
+        width: 30px;
+        transform: rotate(100deg);
+        top: -45px;
+        left: -90px;
+    }
+    
+    .ray9 {
+        height: 80px;
+        width: 10px;
+        transform: rotate(120deg);
+        top: -65px;
+        left: -60px;
+    }
+    
+    .ray10 {
+        height: 190px;
+        width: 23px;
+        transform: rotate(150deg);
+        top: -185px;
+        left: -60px;
+    }
+    
+    @keyframes ray_anim {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    
+    
+    body {
+        margin: 0;
+        
+      }
+      
+      .background {
+        
+        background: linear-gradient(45deg, #ff0000, #00ff00);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: -1; 
+        animation: backgroundAnimation 3s infinite alternate; 
+      }
+      
+      @keyframes backgroundAnimation {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      
+      .content {
+        position: relative; display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff; /
+      }
+      
+      .card {
+        background: none;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
+        text-align: center; align-content: center;
+      }
+      
+    
+       h2, p {line-height: 1.5; font-weight: 800;font-family: 'Times New Roman', Times, serif;
+        margin: 20;
+      }
+    
+      .card{ border: 1px;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 16px;
+      width: 100px;
+      text-align: center;
+      align-items: center;
+      float: center;
+      background-color:none;
+      align-self: center; align-content: center;
+      text-align: center; 
+    }
+    
+    .card-container {line-height: 2.5;
+    text-align: center;
+      overflow: hidden;
+      align-content: center; align-items: center; align-self: center;
+    }
+    h2{font-family: 'Times New Roman', Times, serif; color: #49097d;
+    font-size: 3rem;text-transform: uppercase;}
+    h1 {text-align: center;justify-content: center; font-family: 'Times New Roman', Times, serif;
+        font-size:4rem; color: #010557; text-transform: uppercase; text-decoration: underline;
+    z-index: 3; font-weight: 800;}
+    
+     .lower {top: 50%; bottom: 100%;}
+    
+    P{ color:#072a7e;font-weight: 800;z-index: 3;justify-self: center;align-items: center; align-self: center;}
+    
+    script{align-items: center; align-self: center;}
+    
+    .cloudwrapperOne{z-index: 0;}
+    
+    .cloudwrapperTwo{z-index: 1;}
+    
+    .cloudwrapperThree{z-index: 1;}
+    
+    .script {
+        border: 5px solid;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        align-content: center; justify-self: center; justify-items: center;
+      }
+    
+    .center {
+        border: 7px dotted;
+        border-radius: 5%;
+        box-shadow: #f0edf9;
+        margin: 0;
+        width: 100%;
+        padding: 28px;
+        align-content: center; justify-self: center; 
+        color: rgb(9, 2, 111); border-color: rgb(174, 236, 241);
+    
+      }
+    
+      .results {
+    
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        align-content: center; color: aliceblue; justify-self: center;
+      }
+    
+      #box{z-index: 3;}
+    
+      #results{justify-self: center;align-self: center;align-items: center;}
+    
+      h2, h3{color: rgb(40, 3, 85);align-content: center;font-family: 'Times New Roman', Times, serif;}
+    
+     
+      .center {
+        text-align: center;
+      }
+    
+      #results {
+        margin: 0 auto; 
+        width: 80%;
+      }
+    
+      #results h1,
+      #results h3 {
+        margin: 30px;
+      }
+    
+      #results img {
+        display: block; /* Make the image a block element to center it horizontally */
+        margin: 0 auto; /* Center the image horizontally */
+        max-width: 100%; border-radius: 10%; image-rendering: crisp-edges;
+    align-content: center; margin-bottom:20px;}
+        
+    
+    #list{}
+    
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 120px;
+      background: #f4f5f9;
+    }
+    
+    .button {
+      position: relative;
+      padding: 16px 30px;
+      font-size: 1.5rem;
+      color: var(--color);
+      border: 2px solid rgba(245, 240, 240, 0.5);
+      border-radius: 4px;
+      text-shadow: 0 0 15px var(--color);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      transition: 0.5s;
+      z-index: 1;
+    }
+    
+    .button:hover {
+      color: #ffffff;
+      border: 2px solid rgba(250, 248, 248, 0);
+      box-shadow: 0 0 0px var(--color);
+    }
+    
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color);
+      z-index: -1;
+      transform: scale(0);
+      transition: 0.5s;
+    }
+    
+    .button:hover::before {
+      transform: scale(1);
+      transition-delay: 0.5s;
+      box-shadow: 0 0 10px var(--color),
+        0 0 30px var(--color),
+        0 0 60px var(--color);
+    }
+    
+    .button span {
+      position: absolute;
+      background: var(--color);
+      pointer-events: none;
+      border-radius: 2px;
+      box-shadow: 0 0 10px var(--color),
+        0 0 20px var(--color),
+        0 0 30px var(--color),
+        0 0 50px var(--color),
+        0 0 100px var(--color);
+      transition: 0.5s ease-in-out;
+      transition-delay: 0.25s;
+    }
+    
+    .button:hover span {
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    
+    .button span:nth-child(1),
+    .button span:nth-child(3) {
+      width: 40px;
+      height: 4px;
+    }
+    
+    .button:hover span:nth-child(1),
+    .button:hover span:nth-child(3) {
+      transform: translateX(0);
+    }
+    
+    .button span:nth-child(2),
+    .button span:nth-child(4) {
+      width: 4px;
+      height: 40px;
+    }
+    
+    .button:hover span:nth-child(1),
+    .button:hover span:nth-child(3) {
+      transform: translateY(0);
+    }
+    
+    .button span:nth-child(1) {
+      top: calc(50% - 2px);
+      left: -50px;
+      transform-origin: left;
+    }
+    
+    .button:hover span:nth-child(1) {
+      left: 50%;
+    }
+    
+    .button span:nth-child(3) {
+      top: calc(50% - 2px);
+      right: -50px;
+      transform-origin: right;
+    }
+    
+    .button:hover span:nth-child(3) {
+      right: 50%;
+    }
+    
+    .button span:nth-child(2) {
+      left: calc(50% - 2px);
+      top: -50px;
+      transform-origin: top;
+    }
+    
+    .button:hover span:nth-child(2) {
+      top: 50%;
+    }
+    
+    .button span:nth-child(4) {
+      left: calc(50% - 2px);
+      bottom: -50px;
+      transform-origin: bottom;
+    }
+    
+    .button:hover span:nth-child(4 ) {
+      bottom: 50%;
+    }
