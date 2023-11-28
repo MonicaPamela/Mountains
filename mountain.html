@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan & Play National Guides Mountains</title>
+
+<link href="./mountains.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div id="sky">
+    <div class="theSun">
+      <div class="ray_box">
+        <div class="ray ray1"></div>
+        <div class="ray ray2"></div>
+        <div class="ray ray3"></div>
+        <div class="ray ray4"></div>
+        <div class="ray ray5"></div>
+        <div class="ray ray6"></div>
+        <div class="ray ray7"></div>
+        <div class="ray ray8"></div>
+        <div class="ray ray9"></div>
+        <div class="ray ray10"></div>
+      </div>
+    </div>
+    <div class="cloudwrapperTwo">
+      <div class="cloud c2"></div>
+    </div>
+    <div class="cloudwrapperThree">
+      <div class="cloud c3"></div>
+    </div>
+
+    <h1 class="center"> Plan & Play Mountains Guide
+      <br>
+      <a class="button" href="index.html" style="--color: rgb(113, 252, 91);">
+        Home
+      </a>
+
+      <a class="button" href="parks.html" style="--color: #3cfb39;">
+        Parks
+      </a>
+  
+   </h1>
+  <main>
+    <select>
+      <option>
+    
+      </option>
+    </select>
+  </main>
+
+ <p class="center" select id="results"></p>
+
+    <script>
+      list.addEventListener("change", event=>{ 
+          let mountain = mountainsArray.find(m=>m.name == event.target.value); 
+          results.innerHTML = `<h2>${mountain.name}</h2>`; 
+          results.innerHTML += `<h3>Desc: ${mountain.desc}</h3>`;
+          results.innerHTML += `<h3>Elevation: ${mountain.elevation} feet</h3>`; 
+          results.innerHTML += `<h3>Effort: ${mountain.effort}</h3>`; 
+          results.innerHTML += `<img src="MountainImages/images/${mountain.img}">`;
+      });
+  </script>
+ 
+  <script src="./scripts/locationData.js" rel="script"></script>
+  <script src="./scripts/mountainData.js" rel="script"></script>
+  <script src="./scripts/js.js" rel="script"></script>
+ 
+
+</body>
+</html>
